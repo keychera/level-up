@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/styles.css" rel="stylesheet" type="text/css" title="default">
     <title>Level up</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/scittle@0.6.15/dist/scittle.js" type="application/javascript"></script>
+    <script src="level.cljs" type="application/x-scittle"></script>
 </head>
 <body>
     <div class="bg">
         <div class="level-panel">
             <progress id="exp" value=0 max="100"> 32% </progress>
 
-            <button onclick="">(inc exp)</button>
+            <button onclick="my_alert()">(inc exp)</button>
         </div>
     </div>
 </body>
