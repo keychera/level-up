@@ -5,7 +5,7 @@
 with: https://github.com/keychera/panas.reload#with-bbin
 
 ```
-panas --dir assets
+panas --dir assets --url localhost
 ```
 
 ## refs
