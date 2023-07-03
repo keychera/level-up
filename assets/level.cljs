@@ -1,6 +1,6 @@
 (ns level)
 
-(defonce level (atom 0))
+(defonce level (atom 1))
 
 (defn set-level [lvl]
   (let [level-count (. js/document (getElementById "level-count"))]
