@@ -1,0 +1,15 @@
+{:paths ["src"]
+ :tasks {panas {:extra-deps {io.github.babashka/http-server {:git/sha "90c18ea14b716503b7e6b3179acfb2f0139998ab"}
+                             io.github.keychera/panas.reload {:git/sha "04e87e1442f714d129adf6b2dca9fa7d3694d1d3"}}
+                :requires ([clojure.string :as str]
+                           [panas.reload]
+                           [panas.default :as default]
+                           [babashka.http-server :refer [file-router]]
+                           [babashka.fs :as fs])
+                :task (panas.reload/-main (file-router (fs/path "assets"))
+                                          {:url "localhost" :port 42042}
+                                          {:watch-dir "assets"
+                                           :reloadable? (every-pred
+                                                         (fn [{:keys [uri]}]
+                                                           (not (str/includes? uri ".clj")))
+                                                         default/reloadable?)})}}}
