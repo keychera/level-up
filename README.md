@@ -2,7 +2,7 @@
 
 ## run
 
-with: https://github.com/keychera/panas.reload#with-bbin
+with: https://github.com/keychera/panas.reload
 
 ```
 bb panas
